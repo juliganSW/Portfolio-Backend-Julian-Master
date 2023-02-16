@@ -11,7 +11,7 @@
     <groupId>com.ArgProg</groupId>
     <artifactId>Portfolio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>PortfolioBackend</name>
+    <name>PortfolioBackEnd</name>
     <description>Proyecto Portfolio</description>
     <properties>
         <java.version>19</java.version>
