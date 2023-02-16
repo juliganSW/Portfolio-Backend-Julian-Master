@@ -1,5 +1,5 @@
 
-FROM amazoncorretto:8-alpine-jdk
+FROM amazoncorretto:19
 
 COPY target/Portfolio-0.0.1-SNAPSHOT.jar app.jar 
 
