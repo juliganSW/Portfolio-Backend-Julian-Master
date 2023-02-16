@@ -79,6 +79,11 @@ public class ControllerPersona {
         return perso;
     }*/
     
+    /*@putMappind("/update/{id}")
+    public void editar(@PathVariable("id")int id,Persona per){
+       personaService.save(per);
+    }*/
+    
     @PutMapping("/edit")
     public String editartPersona(@RequestBody Persona per) {
         persoServ.editarPersona(per);
