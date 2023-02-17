@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class ProyectoService implements IProyectoService {
  @Autowired
     public ProyectoRepository proyeRepo; 
+ 
     @Override
     public List<Proyecto> verProyectos() {
          return   proyeRepo.findAll();
