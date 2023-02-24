@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("proyecto")
+@CrossOrigin(origins = "https://portfolio-backend-xube.onrender.com")
 
 public class ControllerProyecto {
 
@@ -49,26 +50,6 @@ public class ControllerProyecto {
         return "El Proyecto fue borrado correctamente";
     }
 
-    /* @PutMapping("/proyectos/editar/{id}")
-    public Proyecto editProyecto(@PathVariable Long id,
-            @RequestParam("proyecto") String nuevoProyecto,
-            @RequestParam("inicio") Date nuevoInicio,
-            @RequestParam("fin") Date nuevoFin, 
-            @RequestParam("descripcion") String nuevaDescripcion, 
-            @RequestParam("imagen") String nuevaImagen, 
-            @RequestParam("tecnologias") String nuevaTecnologia, 
-            @RequestParam("url") String nuevaUrl) {
-        
-        Proyecto proye = proyeServ.buscarProyecto(id);
-
-        proye.setProyecto(nuevoProyecto);
-        proye.setInicio(nuevoInicio);
-        proye.setFin(nuevoFin);
-        proye.setDescripcion(nuevaDescripcion);
-        proye.setTecnologias(nuevaTecnologia);
-        proyeServ.crearProyecto(proye);
-        return proye;
-    }*/
     @PutMapping("/edit")
     public String editartProyecto(@RequestBody Proyecto pro) {
         proyeServ.editarProyecto(pro);

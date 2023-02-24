@@ -50,22 +50,6 @@ public class ControllerHabilidad {
         return "La habilidad fue borrada correctamente";
     }
 
-    /* @PutMapping("/editar/{id}")
-    public Habilidad editHabilidad(@PathVariable Long id,
-            @RequestParam("habilidad") String nuevaHabilidad,
-            @RequestParam("progreso") int nuevoProgreso,
-            @RequestParam("logo") String nuevoLogo,
-            @RequestParam("url") String nuevaUrl) {
-
-        Habilidad habi = habiServ.buscarHabilidad(id);
-
-        habi.setHabilidad(nuevaHabilidad);
-        habi.setProgreso(nuevoProgreso);
-        habi.setLogo(nuevoLogo);
-        habi.setUrl(nuevaUrl);
-        habiServ.crearHabilidad(habi);
-        return habi;
-    }*/
     @PutMapping("/edit")
     public String editarHabilidad(@RequestBody Habilidad hab) {
         habiServ.editarHabilidad(hab);

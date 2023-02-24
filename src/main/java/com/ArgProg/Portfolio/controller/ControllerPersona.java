@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -54,36 +53,6 @@ public class ControllerPersona {
         return "La persona fue borrada correctamente";
     }
 
-   /* @PutMapping("/personas/editar/{id}")
-    public Persona editPersona(@PathVariable Long id,
-            @RequestParam("nombre") String nuevoNombre,
-            @RequestParam("apellido") String nuevoApellido,
-            @RequestParam("edad") int nuevaEdad, 
-            @RequestParam("titulo")String nuevoTitulo,
-            @RequestParam("acercademi") String nuevoAcercademi,
-            @RequestParam("imagen")String nuevaImagen,
-            @RequestParam("email") String nuevoEmail,
-            @RequestParam("password")String nuevoPassword){
-        // Busca la persona
-        Persona perso = persoServ.buscarPersona(id);
-
-        perso.setNombre(nuevoNombre);
-        perso.setApellido(nuevoApellido);
-        perso.setEdad(nuevaEdad);
-        perso.setTitulo( nuevoTitulo);
-        perso.setAcercademi(nuevoAcercademi);
-        perso.setImagen(nuevaImagen);
-        perso.setEmail(nuevoEmail);
-        perso.setPassword(nuevoPassword);
-        persoServ.crearPersona(perso);
-        return perso;
-    }*/
-    
-    /*@putMappind("/update/{id}")
-    public void editar(@PathVariable("id")int id,Persona per){
-       personaService.save(per);
-    }*/
-    
     @PutMapping("/edit")
     public String editartPersona(@RequestBody Persona per) {
         persoServ.editarPersona(per);
